@@ -1,0 +1,19 @@
+<div class="col-xs-6" style="margin-top: 17px;margin-left: 23px;">
+  <button class="btn btn-primary" (click)="gotoUploadFilepage()">uploadDataFile</button>
+</div>
+<table class="table" style="margin-top: 25px;">
+    <tr>
+        <th>userId</th>
+        <th>ID</th>
+        <th>title</th>
+        <th>body</th>
+    </tr>
+    <tr *ngFor = "let obj of data" (click)="gotoNextPage(obj)" >
+        <td>{{obj.userId}}</td>
+        <td>{{obj.id}}</td>
+        <td>{{obj.title}}</td>
+        <td>{{obj.body}}</td>
+    </tr>
+</table>
+
+

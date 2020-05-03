@@ -1,0 +1,34 @@
+<div class="parentDiv col-sm-5">
+    <div>
+        <div>
+              <div class="childDiv">
+                <div class="labelValue">Select a file to upload</div> 
+               <div class="chooseFile"> 
+              <div class="form-group">
+                <input type="file" id="file" (change)="handleFileInput($event.target.files)" class="selectFile">
+                </div>
+              </div> 
+            <div>
+                <button  class="btn btn-light uploadButton" (click)="uploadFile()" >Upload</button>
+            </div>
+            <label style="color: red;margin-left: 23px;">{{value}}</label>
+            <div style="margin-left:21px;margin-top: 14px;">
+            <div class="forText">Name: {{fileName}}</div>
+            <div class="forText"> Size : {{fileSize}}</div>
+             <div class="forText">Type : {{fileType}}</div>
+           </div>
+           <div>
+            <div class="progressBar">
+            <progress-bar [progress]="progress" [color]="'#06a111'"></progress-bar>               
+            </div>
+           </div>
+           <div class="flex-container">
+            <div class="uploadSpeed">{{downlodaSpeed}}</div>
+            <div class="uploadSpeed"*ngIf="time" >|&nbsp;&nbsp;{{time}}</div>
+            <div class="uploadSpeed" style="margin-left: 238px;">{{size}}</div>  
+          </div>
+
+        </div>
+        </div>
+    </div>
+</div>

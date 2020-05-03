@@ -1,0 +1,26 @@
+<form class='form' [formGroup]="personalFormGroup">
+    <div class="row rowData">
+        <div class="col-sm-4">
+          <input type="text" class="form-control"   formControlName="userId" placeholder="user Id">
+        </div>
+        <div class="col-sm-4"> 
+          <input type="text" class="form-control"  formControlName="id" placeholder="ID">
+        </div>
+      </div>
+      <div class="row rowData">
+        <div class="col-sm-4">
+            <input type="text" class="form-control"  formControlName="title" placeholder="Title">
+        </div>
+        <div class="col-sm-">
+          <input type="text" class="form-control"  formControlName="body" placeholder="body">
+        </div>
+      </div>
+   <div class="row">
+    <div class="col-xs-6" style="margin-top: 17px;margin-left: 33px;">
+        <button class="btn btn-primary" (click)="submitData()">Submit</button>
+    </div>
+    <div class="col-xs-6" style="margin-top: 17px;margin-left: 23px;">
+      <button class="btn btn-primary" (click)="uploadDataFile()">upladDataFile</button>
+  </div>
+  </div>
+  </form>
